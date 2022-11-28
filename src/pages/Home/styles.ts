@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "@/config/theme";
 
 export const Container = styled.div`
   * {
@@ -37,18 +36,18 @@ export const FirstSection = styled.div`
         left: 50%;
         transform: translate(-50%, -50%);
         h2 {
-          font-size: 4.5rem;
+          font-size: ${(props) => props.theme.fontSize.xxxlarge};
           font-weight: 700;
           color: #fff;
           text-transform: uppercase;
-          line-height: 100px;
+          line-height: 11vw;
         }
         h4 {
           font-size: ${(props) => props.theme.fontSize.xlarge};
           font-weight: ${(props) => props.theme.fontWeight.semibold};
           color: #fff;
           text-transform: uppercase;
-          letter-spacing: 20px;
+          letter-spacing: 0.2vw;
         }
       }
       .button {

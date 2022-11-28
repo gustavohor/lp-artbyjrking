@@ -6,9 +6,9 @@ export const theme = {
     small: "18px",
     medium: "21px",
     large: "25px",
-    xlarge: "36px",
+    xlarge: "2.3vw",
     xxlarge: "48px",
-    xxxlarge: "72px",
+    xxxlarge: "6vw",
   },
   fontWeight: {
     light: 300,

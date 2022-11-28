@@ -53,7 +53,7 @@ export default function Banners() {
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
-            delay: 4000,
+            delay: 5000,
             disableOnInteraction: false,
           }}
           navigation={true}
@@ -83,7 +83,7 @@ export default function Banners() {
                   : { cursor: "pointer" }
               }
             >
-              <SlArrowLeft size={50} color={"#fff"} />
+              <SlArrowLeft size={30} color={"#fff"} />
             </button>
             <button
               className="--next"
@@ -94,7 +94,7 @@ export default function Banners() {
                   : { cursor: "pointer" }
               }
             >
-              <SlArrowRight size={50} color={"#fff"} />
+              <SlArrowRight size={30} color={"#fff"} />
             </button>
           </div>
         </Swiper>
