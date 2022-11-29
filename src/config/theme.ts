@@ -3,9 +3,9 @@ export const theme = {
     RedHatDisplay: "Red Hat Display, sans-serif",
   },
   fontSize: {
-    small: "18px",
-    medium: "21px",
-    large: "25px",
+    small: "0.9vw",
+    medium: "1.1vw",
+    large: "1.25vw",
     xlarge: "2.3vw",
     xxlarge: "48px",
     xxxlarge: "6vw",

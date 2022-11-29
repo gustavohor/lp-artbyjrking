@@ -25,7 +25,7 @@ export const slider = [
   },
   {
     id: 3,
-    title: "minotouro",
+    title: "ROGÉRIO MINOTOURO",
     job: "Mídia Kit",
     img: minotouro,
   },
