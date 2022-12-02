@@ -71,6 +71,21 @@ export const FirstSection = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 800px) {
+    .slider {
+      .mySwiper {
+        section {
+          h2 {
+            font-size: 40px;
+          }
+          h4 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const JobsSection = styled.div`
@@ -141,6 +156,61 @@ export const JobsSection = styled.div`
         flex-direction: column;
         margin: 2rem auto;
       }
+    }
+  }
+`;
+
+export const ClientsPartnersSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  align-items: center;
+  padding: 5vw 0;
+  h2 {
+    font-size: ${(props) => props.theme.fontSize.xxlarge};
+    font-weight: ${(props) => props.theme.fontWeight.semibold};
+    text-align: center;
+    margin-bottom: 5vw;
+    text-transform: uppercase;
+  }
+  div {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 4.1vw;
+    max-width: 1400px;
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        text-align: center;
+        font-size: ${(props) => props.theme.fontSize.large};
+        font-weight: ${(props) => props.theme.fontWeight.bold};
+      }
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    h2 {
+      font-size: 30px !important;
+    }
+    div {
+      grid-template-columns: repeat(4, 1fr) !important;
+      section {
+        span {
+          font-size: 21px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 800px) {
+    div {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    div {
+      grid-template-columns: repeat(1, 1fr) !important;
     }
   }
 `;
