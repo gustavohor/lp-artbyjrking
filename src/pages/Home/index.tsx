@@ -2,6 +2,7 @@ import { Container } from "./styles";
 import Banners from "./banners";
 import Jobs from "./jobs";
 import ClientsPartners from "./clients-partners";
+import About from "./about";
 
 export default function Homepage() {
   return (
@@ -9,6 +10,7 @@ export default function Homepage() {
       <Banners />
       <Jobs />
       <ClientsPartners />
+      <About />
     </Container>
   );
 }

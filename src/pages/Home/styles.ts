@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import banner_job from "@/assets/banners/jobs.png";
+import background_about from "@/assets/banners/about.png";
 
 export const Container = styled.div`
   * {
@@ -176,7 +177,7 @@ export const ClientsPartnersSection = styled.div`
   div {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 4.1vw;
+    grid-gap: 3vw;
     max-width: 1400px;
     section {
       display: flex;
@@ -217,6 +218,92 @@ export const ClientsPartnersSection = styled.div`
   @media screen and (max-width: 500px) {
     div {
       grid-template-columns: repeat(1, 1fr) !important;
+    }
+  }
+`;
+
+export const AboutSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-image: url(${background_about});
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 7.39vw 0;
+  justify-content: center;
+  background-color: #000;
+  .div {
+    width: 1800px;
+    display: flex;
+    flex-direction: row;
+
+    .column_first {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 100%;
+        margin-right: 7.12rem;
+      }
+    }
+    .column_second {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      h2 {
+        font-size: 67px;
+        font-weight: ${(props) => props.theme.fontWeight.extraBold};
+      }
+      span {
+        max-width: 100%;
+        font-size: 36px;
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .div {
+      width: 100%;
+      flex-direction: column;
+      .column_first {
+        width: 100%;
+        img {
+          width: 50%;
+          height: 100%;
+        }
+      }
+      .column_second {
+        width: 100%;
+        align-items: center;
+        h2 {
+          font-size: 40px;
+          text-align: center;
+        }
+        span {
+          font-size: 30px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .div {
+      width: 100%;
+      flex-direction: column;
+      .column_second {
+        width: 100%;
+        align-items: center;
+        h2 {
+          font-size: 30px;
+          text-align: center;
+          padding: 20px 0;
+        }
+        span {
+          font-size: 18px;
+          text-align: center;
+        }
+      }
     }
   }
 `;
