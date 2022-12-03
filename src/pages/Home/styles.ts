@@ -206,6 +206,12 @@ export const ClientsPartnersSection = styled.div`
   @media screen and (max-width: 800px) {
     div {
       grid-template-columns: repeat(2, 1fr) !important;
+      section {
+        margin-bottom: 2rem;
+        img {
+          max-width: 60%;
+        }
+      }
     }
   }
   @media screen and (max-width: 500px) {

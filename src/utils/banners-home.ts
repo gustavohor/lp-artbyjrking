@@ -67,7 +67,7 @@ export const slider = [
   },
   {
     id: 10,
-    title: "LORENA VIEIRA",
+    title: "LORENA MARIA",
     job: "DESIGN GRÁFICO",
     img: lore,
   },
