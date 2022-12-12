@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import banner_job from "@/assets/banners/jobs.png";
 import background_about from "@/assets/banners/about.png";
+import background_contact from "@/assets/banners/contact.png";
 
 export const Container = styled.div`
   * {
@@ -11,7 +12,6 @@ export const Container = styled.div`
   }
   display: flex;
   flex-wrap: wrap;
-  margin: -10px;
 `;
 
 export const FirstSection = styled.div`
@@ -93,6 +93,7 @@ export const JobsSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   background-image: url(${banner_job});
   background-size: cover;
@@ -103,6 +104,7 @@ export const JobsSection = styled.div`
     grid-gap: 4.1vw;
     padding: 5vw 0;
     max-width: 1400px;
+    justify-items: center;
     section {
       max-width: 20.8vw;
       align-items: center;
@@ -291,6 +293,16 @@ export const AboutSection = styled.div`
     .div {
       width: 100%;
       flex-direction: column;
+      padding: 2rem 1rem;
+      .column_first {
+        width: 100%;
+        img {
+          width: 80%;
+          height: 100%;
+          margin-right: 3rem;
+          margin-left: 3rem;
+        }
+      }
       .column_second {
         width: 100%;
         align-items: center;
@@ -304,6 +316,264 @@ export const AboutSection = styled.div`
           text-align: center;
         }
       }
+    }
+  }
+`;
+
+export const MapSection = styled.div`
+  display: flex;
+  background-color: #000;
+  padding: 5vw 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-size: ${(props) => props.theme.fontSize.xxlarge};
+    font-weight: ${(props) => props.theme.fontWeight.extraBold};
+    text-align: center;
+    padding-bottom: 3vw;
+  }
+
+  @media screen and (max-width: 800px) {
+    h2 {
+      font-size: 30px !important;
+    }
+  }
+`;
+
+export const VideoSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vw 0;
+  background-image: url(${background_about});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000;
+  .mySwiper {
+    width: 80%;
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 60% !important;
+      width: calc(var(--swiper-navigation-size) / 44 * 27) !important;
+      color: #fff;
+    }
+    .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
+      right: 10px !important;
+      left: auto !important;
+    }
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: ${(props) => props.theme.fontSize.xxlarge};
+      padding-bottom: 3rem;
+    }
+    .column {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .player {
+        width: 100%;
+        height: 600px;
+      }
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .mySwiper {
+      width: 100%;
+      h2 {
+        font-size: 30px !important;
+        padding-bottom: 1rem;
+      }
+      .column {
+        width: 80%;
+        .player {
+          width: 100%;
+          height: 400px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .mySwiper {
+      .swiper-button-next,
+      .swiper-button-prev {
+        top: 80% !important;
+      }
+      h2 {
+        font-size: 20px !important;
+      }
+      .column {
+        width: 80%;
+        .player {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+`;
+
+export const MediaSection = styled.div`
+  display: flex;
+  background-color: #000;
+  padding: 5vw 0;
+  flex-direction: column;
+  h2 {
+    font-size: ${(props) => props.theme.fontSize.xlarge};
+    font-weight: ${(props) => props.theme.fontWeight.semibold};
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    strong {
+      font-weight: ${(props) => props.theme.fontWeight.bold};
+    }
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: auto;
+      height: auto;
+      padding: 0 6vw;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    h2 {
+      font-size: 30px !important;
+    }
+    div {
+      flex-direction: column;
+      img {
+        padding: 1.5rem 0;
+        width: 30%;
+        height: 30%;
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    h2 {
+      font-size: 20px !important;
+    }
+    div {
+      flex-direction: column;
+      img {
+        padding: 1.5rem 0;
+      }
+    }
+  }
+`;
+
+export const ContactSection = styled.div`
+  padding: 3vw 0;
+  background-image: url(${background_contact});
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  .div {
+    max-width: 600px;
+    h2 {
+      font-size: ${(props) => props.theme.fontSize.xxlarge};
+      font-weight: ${(props) => props.theme.fontWeight.bold};
+      text-transform: uppercase;
+      margin: 0 0 1rem 0;
+    }
+    span {
+      color: #5e5e5e;
+      font-size: ${(props) => props.theme.fontSize.medium};
+      font-weight: ${(props) => props.theme.fontWeight.bold};
+    }
+    .column {
+      margin: 1rem auto;
+      form {
+        input,
+        textarea {
+          width: 100%;
+          font-size: ${(props) => props.theme.fontSize.large};
+          font-weight: ${(props) => props.theme.fontWeight.bold};
+          padding: 2rem 0 1rem 0;
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid #fff;
+          color: #fff;
+          &::placeholder {
+            color: #fff;
+          }
+        }
+        .submit {
+          margin-top: 3rem;
+          padding: 1rem 0;
+          width: 100%;
+          background-color: transparent;
+          font-size: ${(props) => props.theme.fontSize.large};
+          font-weight: ${(props) => props.theme.fontWeight.bold};
+          color: #fff;
+          border: 3px solid #fff;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .div {
+      margin: 0 2rem;
+      h2 {
+        font-size: 30px !important;
+      }
+      span {
+        font-size: 16px !important;
+      }
+      .column {
+        form {
+          input,
+          textarea {
+            font-size: 16px !important;
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const EmailSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vw 0;
+  background-image: url(${background_about});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000;
+  p {
+    font-size: ${(props) => props.theme.fontSize.xxlarge};
+    font-weight: ${(props) => props.theme.fontWeight.bold};
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 1rem;
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  .number {
+    font-size: ${(props) => props.theme.fontSize.xlarge};
+  }
+  @media screen and (max-width: 800px) {
+    p {
+      font-size: 30px !important;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    p {
+      font-size: 20px !important;
     }
   }
 `;
