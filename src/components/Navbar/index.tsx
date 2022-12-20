@@ -6,8 +6,8 @@ import {
   AiOutlineWhatsApp,
   AiOutlineYoutube,
 } from "react-icons/ai";
-import menu from "@/assets/icons/menu.svg";
 import { BsFacebook } from "react-icons/bs";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function Navbar() {
   const [isOpenMenu, setisOpenMenu] = useState(false);
@@ -21,10 +21,9 @@ export default function Navbar() {
       >
         <div className="menu">
           <section className="-img--text">
-            <img
-              src={menu}
+            <RxHamburgerMenu
+              size={30}
               onClick={() => setisOpenMenu(!isOpenMenu)}
-              alt="Menu"
             />
             <span> MENU</span>
           </section>
