@@ -454,7 +454,7 @@ export const MediaSection = styled.div`
       img {
         padding: 1.5rem 0;
         width: 30%;
-        height: 30%;
+        height: auto;
       }
     }
   }
@@ -466,6 +466,8 @@ export const MediaSection = styled.div`
       flex-direction: column;
       img {
         padding: 1.5rem 0;
+        width: 30%;
+        height: auto;
       }
     }
   }

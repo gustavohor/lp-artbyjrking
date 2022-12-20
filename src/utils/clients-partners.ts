@@ -37,7 +37,7 @@ export const clientspartner = [
   },
   {
     id: 3,
-    title: "Tz da Coronel",
+    title: "TZ da Coronel",
     img: tz,
   },
   {
@@ -82,7 +82,7 @@ export const clientspartner = [
   },
   {
     id: 12,
-    title: "D Black",
+    title: "D'Black",
     img: dblack,
   },
   {
@@ -117,7 +117,7 @@ export const clientspartner = [
   },
   {
     id: 19,
-    title: "André Damião",
+    title: "Andre Damião",
     img: andre,
   },
   {
@@ -127,7 +127,7 @@ export const clientspartner = [
   },
   {
     id: 21,
-    title: "Essencial Favela",
+    title: "Essência Favela",
     img: essencialfavela,
   },
   {

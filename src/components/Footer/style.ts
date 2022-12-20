@@ -38,7 +38,44 @@ export const Container = styled.div`
   @media screen and (max-width: 1350px) {
     div {
       flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 1rem 0;
+      .contact {
+        padding-right: 0;
+        p,
+        span,
+        a {
+          font-size: 20px;
+          color: #fff;
+          text-align: none;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    padding: 1rem;
+    div {
+      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 1rem 0;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    padding: 1rem;
+    div {
+      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      padding: 1rem 0;
+    }
+    .contact {
       align-items: center;
+      p {
+        text-align: center;
+      }
     }
   }
 `;
