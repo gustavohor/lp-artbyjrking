@@ -23,12 +23,16 @@ import jesusluz from "@/assets/clients/jesusluz.png";
 import vandalism from "@/assets/clients/vandalism.png";
 import redetv from "@/assets/clients/redetv.png";
 import vivi from "@/assets/clients/vivi.png";
+import { globoImg } from "./clients/globo";
+import img1 from "@/assets/carousel/globo/globo1.png";
+import img2 from "@/assets/carousel/globo/globo2.png";
 
 export const clientspartner = [
   {
     id: 1,
     title: "Globo",
     img: globo,
+    imagens: [globoImg] as any,
   },
   {
     id: 2,

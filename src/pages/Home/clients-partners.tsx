@@ -1,7 +1,17 @@
 import { ClientsPartnersSection } from "./styles";
 import { clientspartner } from "@/utils/clients-partners";
+import { useDisclosure } from "react-use-disclosure";
+import { useState } from "react";
+import { ModalForm } from "@/components/Modal/index";
 
 export default function ClientsPartners() {
+  const [active, setActive] = useState(false);
+  const {
+    isOpen: isOpenImgs,
+    toggle: toggleImgs,
+    close: closeImgs,
+  } = useDisclosure();
+
   return (
     <ClientsPartnersSection>
       <h2>clientes/parceiros</h2>
@@ -13,6 +23,7 @@ export default function ClientsPartners() {
           </section>
         ))}
       </div>
+      <ModalForm isOpen={isOpenImgs} toggle={closeImgs} />
     </ClientsPartnersSection>
   );
 }
