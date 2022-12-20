@@ -1,4 +1,3 @@
-import Menu from "@/assets/icons/menu.svg";
 import { useState } from "react";
 import { Link } from "react-scroll";
 import { Container } from "./styles";
@@ -7,6 +6,7 @@ import {
   AiOutlineWhatsApp,
   AiOutlineYoutube,
 } from "react-icons/ai";
+import menu from "@/assets/icons/menu.svg";
 import { BsFacebook } from "react-icons/bs";
 
 export default function Navbar() {
@@ -22,7 +22,7 @@ export default function Navbar() {
         <div className="menu">
           <section className="-img--text">
             <img
-              src={Menu}
+              src={menu}
               onClick={() => setisOpenMenu(!isOpenMenu)}
               alt="Menu"
             />
