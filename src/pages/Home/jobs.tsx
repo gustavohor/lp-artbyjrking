@@ -3,7 +3,7 @@ import { jobs } from "@/utils/jobs";
 
 export default function Jobs() {
   return (
-    <JobsSection>
+    <JobsSection id="services">
       <div className="columns">
         {jobs.map((info) => (
           <section>

@@ -1,52 +1,42 @@
 import Menu from "@/assets/Icons/Menu.svg";
 import { useState } from "react";
-import { HiOutlineX } from "react-icons/hi";
 import { Link } from "react-scroll";
 import { Container } from "./styles";
+import {
+  AiOutlineInstagram,
+  AiOutlineWhatsApp,
+  AiOutlineYoutube,
+} from "react-icons/ai";
+import { BsFacebook } from "react-icons/bs";
 
 export default function Navbar() {
   const [isOpenMenu, setisOpenMenu] = useState(false);
 
   return (
     <Container>
-      <nav className="navbar">
-        <div className="menuMobile">
-          <img
-            src={Menu}
-            onClick={() => setisOpenMenu(!isOpenMenu)}
-            alt="Menu"
-          />
+      <nav
+        className="navbar"
+        style={{ backgroundColor: isOpenMenu ? "#000" : "" }}
+        onClick={() => setisOpenMenu(!isOpenMenu)}
+      >
+        <div className="menu">
+          <section className="-img--text">
+            <img
+              src={Menu}
+              onClick={() => setisOpenMenu(!isOpenMenu)}
+              alt="Menu"
+            />
+            <span> MENU</span>
+          </section>
           {isOpenMenu && (
             <>
-              <div>
-                <span>MENU</span>
-              </div>
-              <div>
-                <HiOutlineX
-                  size={35}
-                  className="mobileCross"
-                  onClick={() => setisOpenMenu(!isOpenMenu)}
-                />
-              </div>
               <ul>
                 <li>
                   <Link
-                    to="aboutUs"
+                    to="services"
                     spy={true}
                     smooth={true}
-                    offset={-100}
-                    duration={500}
-                    onClick={() => setisOpenMenu(false)}
-                  >
-                    Trabalhos
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="Products"
-                    spy={true}
-                    smooth={true}
-                    offset={-60}
+                    offset={0}
                     duration={500}
                     onClick={() => setisOpenMenu(false)}
                   >
@@ -55,10 +45,10 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    to="Team"
+                    to="clients"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={0}
                     duration={500}
                     onClick={() => setisOpenMenu(false)}
                   >
@@ -67,11 +57,10 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    className="contact"
-                    to="Contact"
+                    to="midia"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={0}
                     duration={500}
                     onClick={() => setisOpenMenu(false)}
                   >
@@ -80,11 +69,10 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    className="contact"
-                    to="Contact"
+                    to="about"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={0}
                     duration={500}
                     onClick={() => setisOpenMenu(false)}
                   >
@@ -93,8 +81,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    className="contact"
-                    to="Contact"
+                    to="contact"
                     spy={true}
                     smooth={true}
                     offset={-100}
@@ -105,6 +92,36 @@ export default function Navbar() {
                   </Link>
                 </li>
               </ul>
+              <div className="networks">
+                <a
+                  href="https://api.whatsapp.com/send/?phone=5521994183870&text&app_absent=0"
+                  target="_blank"
+                >
+                  <AiOutlineWhatsApp
+                    size={50}
+                    color={"#fff"}
+                    className="icons"
+                  />
+                </a>
+                <a href="http://facebook.com/artbyjrking" target="_blank">
+                  <BsFacebook size={50} color={"#fff"} className="icons" />
+                </a>
+                <a href="http://instagram.com/artbyjrking" target="_blank">
+                  <AiOutlineInstagram
+                    size={50}
+                    color={"#fff"}
+                    className="icons"
+                  />
+                </a>
+                <a href="http://youtube.com/@artbyjrking" target="_blank">
+                  {" "}
+                  <AiOutlineYoutube
+                    size={50}
+                    color={"#fff"}
+                    className="icons"
+                  />
+                </a>
+              </div>
             </>
           )}
         </div>

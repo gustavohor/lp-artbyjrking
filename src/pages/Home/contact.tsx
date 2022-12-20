@@ -3,7 +3,7 @@ import { ContactSection, EmailSection } from "./styles";
 export default function Contact() {
   return (
     <>
-      <ContactSection>
+      <ContactSection id="contact">
         <div className="div">
           <h2>Fale Conosco</h2>
           <span>
@@ -12,7 +12,7 @@ export default function Contact() {
             Entre em contato com a gente!
           </span>
           <div className="column">
-            <form action="onSubmit">
+            <form method="POST" data-netlify="true" action="onSubmit">
               <input type="text" placeholder="Nome" />
               <input type="text" placeholder="Empresa" />
               <input type="email" placeholder="Email" />

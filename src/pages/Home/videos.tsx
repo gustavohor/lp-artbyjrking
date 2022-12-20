@@ -7,7 +7,7 @@ import { videos } from "@/utils/videos";
 
 export default function Videos() {
   return (
-    <VideoSection>
+    <VideoSection id="midia">
       <>
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
           {videos.map((put) => (

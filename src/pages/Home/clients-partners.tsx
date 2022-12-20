@@ -13,7 +13,7 @@ export default function ClientsPartners() {
   } = useDisclosure();
 
   return (
-    <ClientsPartnersSection>
+    <ClientsPartnersSection id="clients">
       <h2>clientes/parceiros</h2>
       <div>
         {clientspartner.map((clients) => (

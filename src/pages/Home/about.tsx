@@ -3,7 +3,7 @@ import img_purple from "@/assets/banners/about_img.png";
 
 export default function About() {
   return (
-    <AboutSection>
+    <AboutSection id="about">
       <div className="div">
         <section className="column_first">
           <img src={img_purple} alt="imagem roxa" />
