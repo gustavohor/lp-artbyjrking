@@ -1,4 +1,4 @@
-import Menu from "@/assets/Icons/menu.svg";
+import Menu from "@/assets/icons/menu.svg";
 import { useState } from "react";
 import { Link } from "react-scroll";
 import { Container } from "./styles";
