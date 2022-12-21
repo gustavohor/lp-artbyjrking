@@ -13,6 +13,7 @@ export const Container = styled.div`
       .-img--text {
         display: flex;
         flex-direction: row;
+        align-items: center;
         span {
           padding-left: 1rem;
         }
