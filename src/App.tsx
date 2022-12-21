@@ -5,15 +5,17 @@ import GlobalFonts from "./global/globalFonts";
 import GlobalStyles from "./global/globalStyles";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Coming from "./pages";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalFonts />
       <GlobalStyles />
-      <Navbar />
+      {/* <Navbar />
       <Homepage />
-      <Footer />
+      <Footer /> */}
+      <Coming />
     </ThemeProvider>
   );
 }
